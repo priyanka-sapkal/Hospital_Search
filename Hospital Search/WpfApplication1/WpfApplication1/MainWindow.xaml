@@ -1,0 +1,67 @@
+﻿<Window x:Name="window1" x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="451.678" Width="591.784" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Foreground="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" ResizeMode="NoResize" MouseDown="window1_MouseDown">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            <GradientStop Color="#FF05050F" Offset="1"/>
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="#FFD1D1D4"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid Margin="-3,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="D:\Project UI images\healthcare-global.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Label x:Name="Name" Content="Name" HorizontalAlignment="Left" Margin="54,64,0,0" VerticalAlignment="Top" Height="38" Width="86" FontSize="22" FontFamily="Arial Narrow" Grid.ColumnSpan="2"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="248,-2,-1,0" VerticalAlignment="Top" Width="49" Click="Button_Click_1" Height="42" Grid.Column="2">
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush ImageSource="D:\Project UI images\1406071446_button_cancel.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Age" HorizontalAlignment="Left" Margin="54,178,0,0" VerticalAlignment="Top" Height="38" Width="86" FontFamily="Arial Narrow" FontSize="22" Grid.ColumnSpan="2"/>
+        <Label Content="Disease" HorizontalAlignment="Left" Margin="54,239,0,0" VerticalAlignment="Top" Height="38" Width="88" FontFamily="Arial Narrow" FontSize="22" Grid.ColumnSpan="2"/>
+        <Label Content="Location" HorizontalAlignment="Left" Margin="53,348,0,0" VerticalAlignment="Top" Height="36" Width="86" FontFamily="Arial Narrow" FontSize="22" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="name_text" HorizontalAlignment="Left" Height="33" Margin="157,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" ToolTip="Enter Name" FontSize="18" Grid.ColumnSpan="3" TextChanged="name_text_TextChanged"/>
+        <ComboBox x:Name="diseaseCombo" HorizontalAlignment="Left" Margin="157,245,0,0" VerticalAlignment="Top" Width="120" Height="22" Grid.ColumnSpan="2" SelectionChanged="diseaseCombo_SelectionChanged" ToolTip="Select Disease"/>
+        <ComboBox x:Name="areaCombo" HorizontalAlignment="Left" Margin="157,353,0,0" VerticalAlignment="Top" Width="120" Height="22" Grid.ColumnSpan="2" SelectionChanged="areaCombo_SelectionChanged" Cursor="" ToolTip="Select Area"/>
+        <Button x:Name="searchButton" Content="Search" HorizontalAlignment="Left" Margin="250,405,0,0" VerticalAlignment="Top" Width="97" RenderTransformOrigin="0.5,0.5" Height="29" Click="Button_Click_2" Grid.Column="1" FontFamily="Arial Narrow" FontSize="20" Background="#FF4DADF0" Grid.ColumnSpan="2">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.06"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label x:Name="Header" Content="HOSPITAL 24X7" HorizontalAlignment="Left" Margin="109,2,0,0" VerticalAlignment="Top" Height="57" Width="350" FontSize="36" FontWeight="Bold" FontFamily="Gill Sans MT" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="age_text" HorizontalAlignment="Left" Height="23" Margin="158,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" TextChanged="age_text_TextChanged"/>
+        <Label Content="Contact No" HorizontalAlignment="Left" Margin="50,128,0,0" VerticalAlignment="Top" Height="40" Width="105" FontFamily="Arial Narrow" FontSize="22" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="contact_text" HorizontalAlignment="Left" Height="24" Margin="157,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" TextChanged="contact_text_TextChanged" Grid.ColumnSpan="2"/>
+        <Label x:Name="error_name" Content="Name cannot be left blank" HorizontalAlignment="Left" Margin="114,67,0,0" VerticalAlignment="Top" Width="175" ScrollViewer.VerticalScrollBarVisibility="Hidden" Background="{x:Null}" Foreground="#FFFF0303" Visibility="Hidden" Grid.Column="2" Height="42" FontSize="14"/>
+        <Label x:Name="error_age" Content="Age is not valid." HorizontalAlignment="Left" Margin="2,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.421,-0.154" Height="30" Width="175" Foreground="#FFE40A0A" Visibility="Hidden" Grid.Column="2" FontSize="14"/>
+        <Label x:Name="error_contact" Content="Contact Number is not valid" HorizontalAlignment="Left" Margin="0,133,0,0" VerticalAlignment="Top" Grid.Column="2" RenderTransformOrigin="0.211,0.577" Width="202" Foreground="#FFEE0A0A" Visibility="Hidden" FontSize="14">
+            <Label.Background>
+                <ImageBrush/>
+            </Label.Background>
+        </Label>
+        <Label Grid.ColumnSpan="2" Content="City" HorizontalAlignment="Left" Margin="53,297,0,0" VerticalAlignment="Top" Height="36" Width="75" FontFamily="Arial Narrow" FontSize="22"/>
+        <ComboBox x:Name="cityCombo" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="158,299,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cityCombo_SelectionChanged" ToolTip="Select City"/>
+        <Label x:Name="error_disease" Content="Select Disease" Grid.Column="2" HorizontalAlignment="Left" Margin="0,244,0,0" VerticalAlignment="Top" Width="167" Foreground="Red" FontSize="14" Visibility="Hidden"/>
+        <Label x:Name="error_City" Content="Select City" Grid.Column="2" HorizontalAlignment="Left" Margin="0,297,0,0" VerticalAlignment="Top" Width="196" Foreground="Red" FontSize="14" Visibility="Hidden"/>
+        <Label x:Name="error_area" Content="Select Area" Grid.Column="2" HorizontalAlignment="Left" Margin="0,351,0,0" VerticalAlignment="Top" Width="182" Foreground="Red" FontSize="14" Visibility="Hidden"/>
+
+    </Grid>
+</Window>

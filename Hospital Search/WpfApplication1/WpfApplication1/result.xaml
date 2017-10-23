@@ -1,0 +1,112 @@
+﻿<Window x:Name="result1" x:Class="WpfApplication1.result"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="result" WindowStartupLocation="CenterScreen" Width="1000" Height="680" WindowStyle="None" BorderThickness="0" AllowsTransparency="True" MouseDown="result1_MouseDown">
+    <Window.Background>
+        <RadialGradientBrush>
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="#FF5EC2CB"/>
+        </RadialGradientBrush>
+    </Window.Background>
+    <Grid Background="#FFFBFBFB">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="291*"/>
+            <ColumnDefinition Width="691*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="161*"/>
+            <RowDefinition Height="158*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="welcome_name" Content="" HorizontalAlignment="Left" Margin="1,2,0,0" VerticalAlignment="Top" Height="30" Width="290" FontSize="18" FontStyle="Italic" Foreground="Black" FontFamily="Arial Narrow" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.Column="1">
+            <Label.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}"/>
+            </Label.Background>
+        </Label>
+        <Border BorderThickness="1" HorizontalAlignment="Left" Height="116" Margin="10,34,0,0" VerticalAlignment="Top" Width="310" Grid.RowSpan="2" Grid.ColumnSpan="3">
+            <Border.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Border.OpacityMask>
+            <Border.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFF3F3F3"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Border.Background>
+                <ImageBrush/>
+            </Border.Background>
+        </Border>
+        <Label x:Name="welcome_contact" Content="" HorizontalAlignment="Left" Margin="0,41,0,0" VerticalAlignment="Top" Height="27" Width="291" Foreground="Black" Grid.Row="1" Grid.Column="1">
+            <Label.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}"/>
+            </Label.Background>
+        </Label>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="401,1,0,0" VerticalAlignment="Top" Height="274" Width="270" Grid.Row="1" Grid.Column="2">
+            <Label.Background>
+                <ImageBrush ImageSource="D:\Project UI images\healthcare-global.jpg"/>
+            </Label.Background>
+        </Label>
+        <Border x:Name="Doctor_details" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="276" Margin="56,0,0,0" VerticalAlignment="Top" Width="277" Grid.Row="1" Grid.Column="2">
+            <Border.Background>
+                <ImageBrush/>
+            </Border.Background>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="338" Margin="6,285,0,0" VerticalAlignment="Top" Width="272" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1">
+            <Label Content="Disease Description" Margin="0,0,0,305" FontSize="14">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="{DynamicResource {x:Static SystemColors.MenuHighlightColorKey}}" Offset="1"/>
+                        <GradientStop Color="{DynamicResource {x:Static SystemColors.MenuHighlightColorKey}}" Offset="0.034"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="338" Margin="57,285,0,0" VerticalAlignment="Top" Width="276" Grid.Row="1" Grid.RowSpan="2" Grid.Column="2">
+            <Label Content="Precautions" Margin="0,0,0,306" FontSize="14">
+                <Label.Background>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}"/>
+                </Label.Background>
+            </Label>
+        </Border>
+        <Label Content="                                                                                         HOSPITAL 24X7" VerticalAlignment="Top" Height="29" TextOptions.TextHintingMode="Fixed" FontSize="18" Grid.ColumnSpan="3">
+            <Label.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+            </Label.Background>
+        </Label>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="338" Margin="400,285,0,0" VerticalAlignment="Top" Width="272" Grid.Row="1" Grid.RowSpan="2" Grid.Column="2">
+            <Label Content="Hospitals Near Your Location:" Margin="0,0,0,306" FontSize="14">
+                <Label.Background>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}"/>
+                </Label.Background>
+            </Label>
+        </Border>
+        <Border HorizontalAlignment="Left" Margin="647,0,0,0" VerticalAlignment="Top" Height="31" Width="44" RenderTransformOrigin="-0.364,0.548" Grid.Column="2" >
+            <Button Content="" Margin="0,-1,-2,0" VerticalAlignment="Top" Height="32" RenderTransformOrigin="2.247,-0.067" Click="Button_Click_1" HorizontalAlignment="Right" Width="29">
+                <Button.Background>
+                    <ImageBrush ImageSource="D:\Project UI images\1406071446_button_cancel.png" Stretch="Uniform" TileMode="Tile"/>
+                </Button.Background>
+                <Button.BorderBrush>
+                    <ImageBrush/>
+                </Button.BorderBrush>
+            </Button>
+        </Border>
+        <ListView x:Name="Hospital_List" HorizontalAlignment="Left" Height="304" Margin="400,317,0,0" Grid.Row="1" VerticalAlignment="Top" Width="271" Grid.RowSpan="2" Grid.Column="2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Hospital Address &amp; Contact" HorizontalAlignment="Left" Margin="57,1,0,0" Grid.Row="1" VerticalAlignment="Top" Width="275" Height="30" FontSize="14" Grid.Column="2">
+            <Label.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}"/>
+            </Label.Background>
+        </Label>
+
+    </Grid>
+</Window>
